@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B2C5F" />
+  <title>Eye Screening AI — Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#hero" aria-label="กลับสู่หน้าแรก">
+      <span class="brand-mark">AI</span>
+      <span>
+        <strong>Eye Screening</strong>
+        <small>Medical AI Project</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#background">ที่มา</a>
+      <a href="#objectives">วัตถุประสงค์</a>
+      <a href="#scope">ขอบเขต</a>
+      <a href="#framework">กรอบแนวคิด</a>
+      <a href="#tools">เครื่องมือ</a>
+      <a href="#methodology">วิธีดำเนินงาน</a>
+      <a href="#testing">การทดสอบ</a>
+      <a href="#summary">สรุป</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="เปิดเมนู">☰</button>
+  </header>
+
+  <aside class="section-dots" id="sectionDots" aria-label="สารบัญย่อ">
+    <a href="#hero" data-label="หน้าปก"></a>
+    <a href="#background" data-label="ที่มา"></a>
+    <a href="#objectives" data-label="วัตถุประสงค์"></a>
+    <a href="#scope" data-label="ขอบเขต"></a>
+    <a href="#framework" data-label="กรอบแนวคิด"></a>
+    <a href="#tools" data-label="เครื่องมือ"></a>
+    <a href="#methodology" data-label="วิธีดำเนินงาน"></a>
+    <a href="#testing" data-label="การทดสอบ"></a>
+    <a href="#summary" data-label="สรุป"></a>
+    <a href="#qa" data-label="Q&A"></a>
+  </aside>
+
+  <main>
+    <!-- 01 HERO -->
+    <section class="section hero" id="hero" data-section="01">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">SPECIAL PROJECT · COMPUTER SCIENCE</span>
+          <h1>
+            ระบบคัดกรองโรคตาเบื้องต้น<br>
+            ผ่าน <span class="accent">LINE Bot</span> ด้วยปัญญาประดิษฐ์
+          </h1>
+          <p class="hero-sub">
+            การประยุกต์ใช้ปัญญาประดิษฐ์ในการวิเคราะห์ภาพถ่ายดวงตา
+            เพื่อช่วยคัดกรองความผิดปกติเบื้องต้นอย่างเข้าถึงง่าย
+          </p>
+
+          <div class="hero-meta">
+            <div>
+              <span>จัดทำโดย</span>
+              <strong>ธันวา ภักดี</strong>
+            </div>
+            <div>
+              <span>สาขาวิชา</span>
+              <strong>วิทยาการคอมพิวเตอร์</strong>
+            </div>
+            <div>
+              <span>ปีการศึกษา</span>
+              <strong>2569</strong>
+            </div>
+          </div>
+
+          <a href="#background" class="primary-btn">
+            เริ่มการนำเสนอ
+            <span>↓</span>
+          </a>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="eye-orbit">
+            <div class="orbit orbit-a"></div>
+            <div class="orbit orbit-b"></div>
+            <div class="orbit orbit-c"></div>
+            <div class="eye-card">
+              <div class="eye-graphic">
+                <div class="iris">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+              <div class="scan-line"></div>
+              <div class="visual-tag tag-one">MobileNetV2</div>
+              <div class="visual-tag tag-two">Grad-CAM</div>
+              <div class="visual-tag tag-three">LINE Bot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-strip reveal delay-2">
+        <div><span>01</span> Image Screening</div>
+        <div><span>02</span> MobileNetV2</div>
+        <div><span>03</span> Explainable AI</div>
+        <div><span>04</span> LINE Bot</div>
+        <div><span>05</span> Dashboard</div>
+      </div>
+    </section>
+
+    <!-- 02 BACKGROUND -->
+    <section class="section" id="background" data-section="02">
+      <div class="section-heading reveal">
+        <span class="eyebrow">BACKGROUND & PROBLEM</span>
+        <h2>ที่มาและความสำคัญของปัญหา</h2>
+        <p>จากปัญหาการเข้าถึงการคัดกรอง สู่แนวคิด Medical AI ที่ใช้งานผ่านแพลตฟอร์มที่ผู้ใช้คุ้นเคย</p>
+      </div>
+
+      <div class="problem-grid">
+        <article class="info-card reveal">
+          <div class="card-no">01</div>
+          <h3>ปัญหาโรคตา</h3>
+          <p>
+            โรคตาเป็นปัญหาสุขภาพที่ส่งผลต่อการมองเห็นและคุณภาพชีวิต
+            การคัดกรองความผิดปกติในระยะเริ่มต้นจึงมีความสำคัญ
+          </p>
+        </article>
+
+        <article class="info-card reveal delay-1">
+          <div class="card-no">02</div>
+          <h3>ข้อจำกัดในการเข้าถึง</h3>
+          <p>
+            การเข้ารับบริการจากจักษุแพทย์ในบางพื้นที่ยังมีข้อจำกัด
+            ด้านระยะทาง ค่าใช้จ่าย และเวลา
+          </p>
+        </article>
+
+        <article class="info-card featured reveal delay-2">
+          <div class="card-no">03</div>
+          <h3>AI + LINE Bot</h3>
+          <p>
+            โครงงานจึงนำ Deep Learning มาช่วยวิเคราะห์ภาพดวงตา
+            และใช้ LINE Bot เป็นช่องทางส่งภาพและรับผลการคัดกรองเบื้องต้น
+          </p>
+        </article>
+      </div>
+
+      <div class="statement reveal">
+        <span class="statement-icon">✦</span>
+        <p>
+          แนวคิดหลักคือการทำให้ <strong>“การคัดกรองเบื้องต้นเข้าถึงง่ายขึ้น”</strong>
+          โดยใช้ AI เป็นเครื่องมือช่วยวิเคราะห์ ไม่ใช่การวินิจฉัยแทนแพทย์
+        </p>
+      </div>
+    </section>
+
+    <!-- 03 OBJECTIVES -->
+    <section class="section soft-section" id="objectives" data-section="03">
+      <div class="section-heading reveal">
+        <span class="eyebrow">OBJECTIVES</span>
+        <h2>วัตถุประสงค์ของโครงงาน</h2>
+      </div>
+
+      <div class="objective-grid">
+        <article class="objective-card reveal">
+          <span>01</span>
+          <h3>พัฒนาระบบคัดกรอง</h3>
+          <p>พัฒนาระบบคัดกรองโรคตาเบื้องต้นผ่าน LINE Bot ด้วยเทคโนโลยีปัญญาประดิษฐ์</p>
+        </article>
+
+        <article class="objective-card reveal delay-1">
+          <span>02</span>
+          <h3>จำแนกภาพ 5 กลุ่ม</h3>
+          <p>พัฒนาโมเดล Deep Learning สำหรับจำแนกภาพดวงตาและภาพที่ไม่ใช่ดวงตาออกเป็น 5 กลุ่ม</p>
+        </article>
+
+        <article class="objective-card reveal delay-2">
+          <span>03</span>
+          <h3>อธิบายผลด้วย Grad-CAM</h3>
+          <p>ใช้ Grad-CAM แสดงบริเวณของภาพที่โมเดลให้ความสำคัญในการจำแนกผล</p>
+        </article>
+
+        <article class="objective-card reveal delay-3">
+          <span>04</span>
+          <h3>พัฒนา Dashboard</h3>
+          <p>จัดเก็บและแสดงข้อมูลการใช้งาน ผลการคัดกรอง และค่าความมั่นใจเพื่อช่วยติดตามระบบ</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 SCOPE -->
+    <section class="section" id="scope" data-section="04">
+      <div class="section-heading reveal">
+        <span class="eyebrow">PROJECT SCOPE</span>
+        <h2>ขอบเขตของโครงงาน</h2>
+      </div>
+
+      <div class="scope-layout">
+        <div class="class-panel reveal">
+          <div class="panel-head">
+            <span>DATA CLASSES</span>
+            <strong>5 กลุ่มข้อมูล</strong>
+          </div>
+
+         <div class="class-list">
+
+  <div class="class-row">
+    <img src="images/cataract.jpg" alt="ต้อกระจก">
+    <div>
+      <strong>ต้อกระจก</strong>
+      <small>Cataract</small>
+    </div>
+  </div>
+
+  <div class="class-row">
+    <img src="images/dry-eye.jpg" alt="ตาแห้ง">
+    <div>
+      <strong>ตาแห้ง</strong>
+      <small>Dry Eye</small>
+    </div>
+  </div>
+
+  <div class="class-row">
+    <img src="images/pterygium.jpg" alt="ต้อเนื้อ">
+    <div>
+      <strong>ต้อเนื้อ</strong>
+      <small>Pterygium</small>
+    </div>
+  </div>
+
+  <div class="class-row">
+    <img src="images/normal.jpg" alt="ดวงตาปกติ">
+    <div>
+      <strong>ดวงตาปกติ</strong>
+      <small>Normal</small>
+    </div>
+  </div>
+
+  <div class="class-row">
+    <img src="images/non-eye.jpg" alt="ภาพที่ไม่ใช่ดวงตา">
+    <div>
+      <strong>ภาพที่ไม่ใช่ดวงตา</strong>
+      <small>Non-eye Image</small>
+    </div>
+  </div>
+
+</div>
+
+</div>     <!-- ปิด class-list -->
+
+        <div class="scope-cards">
+          <article class="mini-card reveal delay-1">
+            <span class="mini-label">DATA</span>
+            <h3>แหล่งข้อมูล</h3>
+            <p>ข้อมูลภาพจากแหล่งข้อมูลสาธารณะ เช่น Kaggle Dataset และ Google Images</p>
+          </article>
+
+          <article class="mini-card reveal delay-2">
+            <span class="mini-label">MODEL</span>
+            <h3>MobileNetV2</h3>
+            <p>ใช้เป็นโมเดลหลักร่วมกับ Transfer Learning สำหรับการจำแนกภาพ</p>
+          </article>
+
+          <article class="mini-card reveal delay-3">
+            <span class="mini-label">SYSTEM</span>
+            <h3>LINE + Dashboard</h3>
+            <p>ผู้ใช้ส่งภาพผ่าน LINE Bot และผู้ดูแลติดตามข้อมูลผ่าน Dashboard</p>
+          </article>
+
+          <article class="mini-card reveal delay-4">
+            <span class="mini-label">DATABASE</span>
+            <h3>SQLite</h3>
+            <p>จัดเก็บข้อมูลที่จำเป็นต่อการทดสอบ การติดตามผล และการแสดงข้อมูลของระบบ</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 FRAMEWORK -->
+    <section class="section dark-section" id="framework" data-section="05">
+      <div class="section-heading light reveal">
+        <span class="eyebrow">CONCEPTUAL FRAMEWORK</span>
+        <h2>กรอบแนวคิดของโครงงาน</h2>
+        <p>แยกขั้นตอนการพัฒนาโมเดลออกจากขั้นตอนการใช้งานจริงของผู้ใช้</p>
+      </div>
+
+      <div class="framework">
+        <div class="framework-stage reveal">
+          <span class="stage-no">01</span>
+          <h3>Dataset</h3>
+          <p>รวบรวมภาพ 5 กลุ่ม</p>
+        </div>
+        <div class="flow-arrow">→</div>
+
+        <div class="framework-stage reveal delay-1">
+          <span class="stage-no">02</span>
+          <h3>Pre-processing</h3>
+          <p>Resize 224 × 224</p>
+        </div>
+        <div class="flow-arrow">→</div>
+
+        <div class="framework-stage reveal delay-2">
+          <span class="stage-no">03</span>
+          <h3>Training</h3>
+          <p>Data Augmentation + Transfer Learning</p>
+        </div>
+        <div class="flow-arrow">→</div>
+
+        <div class="framework-stage reveal delay-3">
+          <span class="stage-no">04</span>
+          <h3>MobileNetV2</h3>
+          <p>จำแนกภาพ 5 กลุ่ม</p>
+        </div>
+        <div class="flow-arrow">→</div>
+
+        <div class="framework-stage reveal delay-4">
+          <span class="stage-no">05</span>
+          <h3>Grad-CAM</h3>
+          <p>อธิบายผลการตัดสินใจของโมเดล</p>
+        </div>
+      </div>
+
+      <div class="runtime-flow reveal">
+        <div class="runtime-title">การใช้งานจริงของระบบ</div>
+        <div class="runtime-chain">
+          <span>ผู้ใช้ส่งภาพ</span>
+          <b>→</b>
+          <span>LINE Bot</span>
+          <b>→</b>
+          <span>Backend</span>
+          <b>→</b>
+          <span>MobileNetV2</span>
+          <b>→</b>
+          <span>ผลคัดกรอง + Grad-CAM</span>
+          <b>→</b>
+          <span>LINE / SQLite / Dashboard</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 TOOLS -->
+<section class="section" id="tools" data-section="06">
+  <div class="section-heading reveal">
+    <span class="eyebrow">TOOLS & SOFTWARE</span>
+    <h2>เครื่องมือและซอฟต์แวร์ที่ใช้</h2>
+  </div>
+
+  <div class="tech-columns">
+
+    <!-- FRONTEND -->
+    <article class="tech-column reveal">
+      <div class="tech-head frontend">
+        <span>01</span>
+        <h3>Frontend / User Interface</h3>
+      </div>
+
+      <ul>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo logo-html">HTML</div>
+            <strong>HTML</strong>
+          </div>
+          <span>โครงสร้างหน้า Dashboard</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo logo-css">CSS</div>
+            <strong>CSS</strong>
+          </div>
+          <span>จัดรูปแบบและออกแบบส่วนติดต่อ</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo logo-js">JS</div>
+            <strong>JavaScript</strong>
+          </div>
+          <span>เพิ่มการโต้ตอบและพฤติกรรมหน้าเว็บ</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <img
+              class="tech-logo"
+              src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/line/default.svg"
+              alt="LINE">
+            <strong>LINE</strong>
+          </div>
+          <span>ช่องทางส่งภาพและรับผลสำหรับผู้ใช้งาน</span>
+        </li>
+
+      </ul>
+    </article>
+
+
+    <!-- BACKEND -->
+    <article class="tech-column reveal delay-1">
+      <div class="tech-head backend">
+        <span>02</span>
+        <h3>Backend</h3>
+      </div>
+
+      <ul>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo python-logo">Py</div>
+            <strong>Python</strong>
+          </div>
+          <span>ภาษาหลักในการพัฒนาระบบ</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo flask-logo">Fl</div>
+            <strong>Flask</strong>
+          </div>
+          <span>พัฒนา Web Backend และ Dashboard</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo line-api-logo">API</div>
+            <strong>LINE Messaging API</strong>
+          </div>
+          <span>เชื่อมต่อ LINE Bot กับระบบ</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <img
+              class="tech-logo sqlite-logo"
+              src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/sqlite/default.svg"
+              alt="SQLite">
+            <strong>SQLite</strong>
+          </div>
+          <span>จัดเก็บข้อมูลของระบบ</span>
+        </li>
+
+      </ul>
+    </article>
+
+
+    <!-- MODEL / AI -->
+    <article class="tech-column reveal delay-2">
+      <div class="tech-head model">
+        <span>03</span>
+        <h3>Model / AI</h3>
+      </div>
+
+      <ul>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo mobilenet-logo">AI</div>
+            <strong>MobileNetV2</strong>
+          </div>
+          <span>โมเดลหลักสำหรับจำแนกภาพ</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <img
+              class="tech-logo"
+              src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/keras/default.svg"
+              alt="Keras">
+            <strong>TensorFlow / Keras</strong>
+          </div>
+          <span>Framework สำหรับพัฒนาและฝึกโมเดล</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <img
+              class="tech-logo"
+              src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/opencv/default.svg"
+              alt="OpenCV">
+            <strong>OpenCV / NumPy</strong>
+          </div>
+          <span>เตรียมและประมวลผลภาพ</span>
+        </li>
+
+        <li>
+          <div class="tech-name">
+            <div class="tech-logo gradcam-logo">G</div>
+            <strong>Grad-CAM</strong>
+          </div>
+          <span>อธิบายบริเวณที่โมเดลให้ความสำคัญ</span>
+        </li>
+
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+    <!-- 07 METHODOLOGY -->
+    <section class="section soft-section" id="methodology" data-section="07">
+      <div class="section-heading reveal">
+        <span class="eyebrow">METHODOLOGY</span>
+        <h2>วิธีการดำเนินงาน</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-no">01</div>
+          <div>
+            <h3>ศึกษาข้อมูลและวิเคราะห์ความต้องการ</h3>
+            <p>ศึกษาข้อมูลโรคตา เทคโนโลยี AI, Deep Learning, Image Processing และ LINE Messaging API</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-no">02</div>
+          <div>
+            <h3>รวบรวมและเตรียมข้อมูลภาพ</h3>
+            <p>จัดเตรียมภาพ 5 กลุ่ม ตรวจสอบคุณภาพ และปรับขนาดภาพให้เหมาะสมกับโมเดล</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-no">03</div>
+          <div>
+            <h3>สร้างและฝึกสอนแบบจำลอง</h3>
+            <p>ใช้ MobileNetV2 ร่วมกับ Transfer Learning และใช้ Data Augmentation เฉพาะข้อมูลฝึกสอน</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-no">04</div>
+          <div>
+            <h3>พัฒนา LINE Bot และ Backend</h3>
+            <p>รับภาพจากผู้ใช้ ส่งเข้าสู่ระบบประมวลผล และส่งผลการคัดกรองกลับผ่าน LINE</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-no">05</div>
+          <div>
+            <h3>พัฒนา SQLite และ Dashboard</h3>
+            <p>จัดเก็บข้อมูลที่จำเป็นต่อระบบ และแสดงประวัติ/ผลการคัดกรองสำหรับผู้ดูแลระบบ</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-no">06</div>
+          <div>
+            <h3>Grad-CAM + ทดสอบระบบ</h3>
+            <p>สร้าง Heatmap เพื่อช่วยอธิบายผล พร้อมทดสอบการจำแนก การรับส่งข้อมูล และการแสดงผล</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 08 TESTING -->
+    <section class="section" id="testing" data-section="08">
+      <div class="section-heading reveal">
+        <span class="eyebrow">TESTING & EVALUATION</span>
+        <h2>สมมติฐานการทดสอบและประเมินผล</h2>
+        <p>ประเมินทั้งตัวโมเดลและการทำงานของระบบ โดยไม่ใส่ผลลัพธ์สมมุติที่ยังไม่ได้ทดลองจริง</p>
+      </div>
+
+      <div class="testing-grid">
+        <article class="metric-card reveal">
+          <span class="metric">ACC</span>
+          <h3>Accuracy</h3>
+          <p>ตรวจสอบสัดส่วนการจำแนกที่ถูกต้องโดยรวม</p>
+        </article>
+
+        <article class="metric-card reveal delay-1">
+          <span class="metric">P</span>
+          <h3>Precision</h3>
+          <p>ประเมินความแม่นยำของผลที่โมเดลทำนายในแต่ละกลุ่ม</p>
+        </article>
+
+        <article class="metric-card reveal delay-2">
+          <span class="metric">R</span>
+          <h3>Recall</h3>
+          <p>ประเมินความสามารถในการตรวจพบข้อมูลของแต่ละกลุ่ม</p>
+        </article>
+
+        <article class="metric-card reveal delay-3">
+          <span class="metric">F1</span>
+          <h3>F1-Score</h3>
+          <p>ใช้พิจารณาความสมดุลระหว่าง Precision และ Recall</p>
+        </article>
+      </div>
+
+      <div class="system-test reveal">
+        <div>
+          <span>01</span>
+          <h4>LINE Bot</h4>
+          <p>รับภาพและส่งผลกลับได้ถูกต้อง</p>
+        </div>
+        <div>
+          <span>02</span>
+          <h4>Grad-CAM</h4>
+          <p>สร้าง Heatmap ประกอบผลการวิเคราะห์</p>
+        </div>
+        <div>
+          <span>03</span>
+          <h4>SQLite</h4>
+          <p>บันทึกและเรียกดูข้อมูลได้ถูกต้อง</p>
+        </div>
+        <div>
+          <span>04</span>
+          <h4>Dashboard</h4>
+          <p>แสดงข้อมูลและประวัติการใช้งานได้ครบถ้วน</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 SUMMARY -->
+    <section class="section dark-section" id="summary" data-section="09">
+      <div class="section-heading light reveal">
+        <span class="eyebrow">BENEFITS & SUMMARY</span>
+        <h2>ประโยชน์ที่คาดว่าจะได้รับ & สรุป</h2>
+      </div>
+
+      <div class="benefit-grid">
+        <article class="benefit-card reveal">
+          <span>01</span>
+          <h3>เข้าถึงง่าย</h3>
+          <p>ผู้ใช้งานสามารถส่งภาพและรับผลการคัดกรองผ่าน LINE Bot ซึ่งเป็นแพลตฟอร์มที่คุ้นเคย</p>
+        </article>
+        <article class="benefit-card reveal delay-1">
+          <span>02</span>
+          <h3>คัดกรองเบื้องต้น</h3>
+          <p>ช่วยจำแนกภาพดวงตาออกเป็น 5 กลุ่มเพื่อสนับสนุนการประเมินเบื้องต้น</p>
+        </article>
+        <article class="benefit-card reveal delay-2">
+          <span>03</span>
+          <h3>อธิบายผลได้</h3>
+          <p>Grad-CAM ช่วยแสดงบริเวณของภาพที่มีอิทธิพลต่อการจำแนกของโมเดล</p>
+        </article>
+        <article class="benefit-card reveal delay-3">
+          <span>04</span>
+          <h3>ติดตามระบบ</h3>
+          <p>Dashboard และ SQLite ช่วยจัดเก็บและตรวจสอบข้อมูลที่เกี่ยวข้องกับการทำงานของระบบ</p>
+        </article>
+      </div>
+
+      <div class="closing-flow reveal">
+        <span>Eye Image</span><b>→</b>
+        <span>MobileNetV2</span><b>→</b>
+        <span>5 Classes</span><b>→</b>
+        <span>Grad-CAM</span><b>→</b>
+        <span>LINE Bot</span><b>→</b>
+        <span>Dashboard</span>
+      </div>
+    </section>
+
+    <!-- 10 QA -->
+    <section class="section qa" id="qa" data-section="10">
+      <div class="qa-card reveal">
+        <span class="eyebrow">THANK YOU</span>
+        <h2>ขอบคุณสำหรับการรับฟัง</h2>
+        <p>พร้อมตอบคำถามเกี่ยวกับการพัฒนาโมเดล การทำงานของ LINE Bot และโครงสร้างระบบ</p>
+
+        <div class="qa-line"></div>
+
+        <div class="qa-meta">
+          <span>Medical AI Project</span>
+          <span>Computer Science</span>
+          <span>Academic Year 2026</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-top" id="backTop" aria-label="กลับด้านบน">↑</button>
+
+  <script src="script.js"></script>
+
+  <!-- Disease Preview -->
+<div class="disease-overlay" id="diseaseOverlay">
+
+  <div class="disease-preview">
+
+    <button class="disease-close" id="diseaseClose">
+      ×
+    </button>
+
+    <div class="disease-image-wrap">
+      <img id="diseasePreviewImage" src="" alt="">
+    </div>
+
+    <div class="disease-info">
+
+      <span class="disease-tag">
+        EYE SCREENING
+      </span>
+
+      <h2 id="diseasePreviewTitle">
+        ต้อกระจก
+      </h2>
+
+      <p class="disease-en" id="diseasePreviewEnglish">
+        Cataract
+      </p>
+
+      <p id="diseasePreviewDescription">
+        ตัวอย่างภาพสำหรับกลุ่มต้อกระจก
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
